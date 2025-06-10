@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大塚商会 | 多摩営業部</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #005bac; /* 大塚商会コーポレートブルー (近似) */
+      --secondary: #009fe8;
+      --light: #f5f7fa;
+      --dark: #333;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--dark); background: var(--light); line-height: 1.6; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      font-size: 0.9rem;
+    }
+    nav li:hover {
+      opacity: 0.8;
+    }
+    .hero {
+      background: linear-gradient(180deg, rgba(0,91,172,0.75), rgba(0,91,172,0.4)), url('https://source.unsplash.com/featured/1600x800?tokyo,night') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      max-width: 720px;
+      margin-inline: auto;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--secondary);
+      color: #fff;
+      padding: 12px 32px;
+      border-radius: 4px;
+      margin-top: 32px;
+      font-weight: 700;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin-inline: auto;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 48px;
+      position: relative;
+    }
+    section h2::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card img { width: 100%; height: 160px; object-fit: cover; }
+    .card-content { padding: 24px; flex-grow: 1; }
+    .card-content h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--primary); }
+    .card-content p { font-size: 0.9rem; }
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .about img { width: 100%; border-radius: 8px; object-fit: cover; }
+    .contact {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .contact p { margin-bottom: 20px; font-size: 1.1rem; }
+    footer {
+      background: #002d59;
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+    }
+    @media (max-width: 768px) {
+      .about { grid-template-columns: 1fr; }
+      header { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">大塚商会 多摩営業部</div>
+    <nav>
+      <ul>
+        <li><a href="#services">サービス</a></li>
+        <li><a href="#cases">導入事例</a></li>
+        <li><a href="#about">私たちについて</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>DXで地域企業の未来を支える</h1>
+    <p>多摩地域に根差し、中堅・中小企業様のIT課題をワンストップで解決。基幹システム導入からインフラ構築、AI・DXまで幅広くサポートします。</p>
+    <a href="#contact" class="btn-primary">ご相談はこちら</a>
+  </section>
+
+  <section id="services">
+    <h2>主なサービス</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/400x300?computer,server" alt="基幹システム導入">
+        <div class="card-content">
+          <h3>基幹システム導入</h3>
+          <p>販売・在庫・会計などの基幹業務を一元管理し、業務効率と精度を向上させるシステムを提供します。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/400x300?network,data" alt="サーバー・ネットワーク">
+        <div class="card-content">
+          <h3>サーバー・ネットワーク構築</h3>
+          <p>オンプレ／クラウドを問わず、最適なインフラを設計・構築し、安定運用とセキュリティを確保します。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/400x300?security,cyber" alt="セキュリティ対策">
+        <div class="card-content">
+          <h3>セキュリティ対策</h3>
+          <p>UTMやEDRなど最新ソリューションでサイバー攻撃から企業資産を保護。万全のセキュリティ体制を支援します。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/400x300?ai,data" alt="DXコンサルティング">
+        <div class="card-content">
+          <h3>DXコンサルティング</h3>
+          <p>AI・RPA活用や業務プロセス改善で生産性を向上し、企業の競争力強化を実現します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases">
+    <h2>導入事例</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/400x300?factory" alt="製造業事例">
+        <div class="card-content">
+          <h3>製造業 A社</h3>
+          <p>生産管理システムの導入によりリードタイムを30％短縮し、在庫回転率を改善。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/400x300?retail,shop" alt="小売業事例">
+        <div class="card-content">
+          <h3>小売業 B社</h3>
+          <p>POS連携基幹システムでリアルタイム在庫把握を実現し、欠品率を大幅に削減。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/400x300?hospital" alt="医療機関事例">
+        <div class="card-content">
+          <h3>医療機関 C院</h3>
+          <p>電子カルテと連携したセキュアなネットワーク構築で業務を効率化し、診療待ち時間を短縮。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>私たちについて</h2>
+    <div class="about">
+      <img src="https://source.unsplash.com/featured/600x450?office,team" alt="多摩営業部オフィス">
+      <div>
+        <h3>地域密着のパートナー</h3>
+        <p>大塚商会多摩営業部は、東京都多摩地域のお客様に寄り添い、IT環境の最適化とDX推進をサポートしています。業種特化の提案力と全国ネットワークを活かし、導入後も安心のサポートを提供します。</p>
+        <h4>活動エリア</h4>
+        <ul>
+          <li>東京都小金井市</li>
+          <li>東村山市</li>
+          <li>府中市</li>
+          <li>その他多摩地域</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>お問い合わせ</h2>
+    <p>導入相談・お見積もりはお気軽にご連絡ください。</p>
+    <p><strong>TEL:</strong> 042-XXX-XXXX  |  <strong>Email:</strong> tama.sales@example.co.jp</p>
+    <a href="mailto:tama.sales@example.co.jp" class="btn-primary">メールで問い合わせる</a>
+  </section>
+
+  <footer>
+    © 2025 OTSUKA CORPORATION. All rights reserved.
+  </footer>
+</body>
+</html>
